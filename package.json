@@ -4,7 +4,7 @@
   "description": "this is a service for the assignment",
   "main": "index.js",
   "scripts": {
-    "test": "test",
+    "test": "jest",
     "start:dev": "npx nodemon",
     "build": "rimraf ./dist && tsc",
     "start": "npm run build && node dist/index.js"
