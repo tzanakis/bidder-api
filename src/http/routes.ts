@@ -1,3 +1,3 @@
 export const mainRoute = '/api';
 
-export const sampleRoute = `${mainRoute}/sample`;
+export const bidRoute = `${mainRoute}/bid`;
