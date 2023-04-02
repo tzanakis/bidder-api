@@ -7,7 +7,10 @@ export class CampaignClient {
   public async getCampaigns() {
     const campaigns: CampaignInfo[] = await campaignClient(
       this.campaignApiConfiguration
-    ).get("/campaigns", { timeout: 30000 });
+    ).get("/campaigns", {
+      timeout: 30000,
+      baseURL: this.campaignApiConfiguration.baseUrl,
+    });
 
     return campaigns;
   }

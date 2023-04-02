@@ -25,7 +25,7 @@ export class BidService {
           bidRequest.mobileDeviceInfo.geoLocation.longitude
     );
 
-    if (!targetedCampaigns) {
+    if (!targetedCampaigns || targetedCampaigns.length === 0) {
       return bid;
     }
 

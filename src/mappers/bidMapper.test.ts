@@ -4,6 +4,7 @@ import { mapBidRequestToBid, mapBidToBidResponse } from "./bidMapper";
 describe("BidMapper", () => {
   describe("mapBidRequestToBid", () => {
     it("should map a bid request to a bid", () => {
+      // Arrange
       const bidRequest = {
         bidId: "bidId",
         mobileAppInfo: {
@@ -21,8 +22,10 @@ describe("BidMapper", () => {
         },
       };
 
+      // Act
       const bid = mapBidRequestToBid(bidRequest);
 
+      // Assert
       expect(bid).toEqual({
         bidId: "bidId",
         mobileAppInfo: {
@@ -44,6 +47,7 @@ describe("BidMapper", () => {
 
   describe("mapBidToBidResponse", () => {
     it("should map a bid to a bid response when no matched campaign is found", () => {
+      // Arrange
       const bid: Bid = {
         bidId: "bidId",
         mobileAppInfo: {
@@ -61,8 +65,10 @@ describe("BidMapper", () => {
         },
       };
 
+      // Act
       const bidResponse = mapBidToBidResponse(bid);
 
+      // Assert
       expect(bidResponse).toEqual({
         bidId: "bidId"});
 
